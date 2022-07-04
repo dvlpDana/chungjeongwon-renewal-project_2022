@@ -1,0 +1,12 @@
+:root {
+  --pointcolor: #04C7E9;
+  --pointcolor-deep:#00B6D6;
+  --pointcolor-deepest:#389AAB;
+  --pointcolor-yellow:#FFF0C3;
+  --fontcolor: #3A3A3A; 
+  --fontcolor-light: #848484; 
+  --linecolor: #C4C4C4;
+  --bg-color: #F3F3F3;
+  --shadow: 0 3px 6px rgba(0,0,0,0.2);
+  --banner-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

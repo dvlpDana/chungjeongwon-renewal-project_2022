@@ -1,0 +1,260 @@
+.sec-newsRoom .wrap {
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+/* news_banners start */
+
+.news-banners {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px 50px;
+}
+
+.news-banners li {
+  width: calc(20% - 3rem);
+  padding-top: 20%;
+  position: relative;
+}
+
+
+.news-banners li>* {
+  position: absolute;
+}
+
+.news-banners li div {
+  top: 0;
+  width: 100%;
+  height: 80%;
+}
+
+.news-banners li div img {
+  height: 100%;
+}
+
+.news-banners li div>p {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.25rem;
+  transition: .3s;
+  padding-top: 40%;
+  transition: .5s;
+}
+
+.news-banners li div>p>span {
+  display: block;
+  right: 5%;
+  bottom: 5%;
+  color: var(--fontcolor-light);
+  font-size: 0.75rem;
+  font-weight: 100;
+  text-align: right;
+  padding: 0 5% 5% 0;
+}
+
+.news-banners li div>p:hover,
+.news-banners li div>p:hover span {
+  background-color: transparent;
+  color: transparent;
+}
+
+.news-banners li>p {
+  bottom: 5%;
+  color: var(--fontcolor-light);
+  text-align: left;
+  letter-spacing: -0.5px;
+  font-weight: 100;
+}
+
+.news-banners li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  background-color: lightgrey;
+  top: 0;
+  right: -1.75rem;
+}
+
+/* news_banners end */
+
+/* news-youtube start */
+.news-youtube {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.youtube_banner {
+  width: 30%;
+  background-color: white;
+  box-shadow: var(--shadow);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube_banner div {
+  overflow: hidden;
+}
+
+.youtube_banner img {
+  transition: .3s;
+}
+
+.youtube_banner:hover img {
+  transform: scale(1.12);
+}
+
+.youtube_banner a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.youtube_banner a i {
+  font-size: 2rem;
+  position: absolute;
+  color: #848484;
+  opacity: 0.8;
+  top: calc(50% - 2rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.youtube_banner>p {
+  padding-left: 0.75rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.youtube_banner>span {
+  font-size: 0.75rem;
+  font-weight: 100;
+  text-align: right;
+  padding: 0.5rem 0.75rem;
+  display: block;
+}
+
+/* news-youtube end */
+
+/* sec-newsRoom 모바일 버전 : max-width 820px start*/
+@media (max-width: 1170px) {
+  .news-banners li {
+    font-size: smaller;
+  }
+  .news-banners li>p {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .sec-newsRoom {
+    height: 100%;
+  }
+
+  .sec-newsRoom .wrap {
+    padding: 50px 0;
+  }
+
+  .sec-newsRoom h3 {
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  .sec-newsRoom h3+span {
+    font-size: 1.25rem;
+    padding-top: 1.5rem;
+  }
+
+  .news-banners {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .news-banners li {
+    width: 40%;
+    padding-top: 45%;
+  }
+
+  .news-banners li > div{
+    height: 80%;
+  }
+  .news-banners li>div>p {
+    padding-top: 30%;
+  }
+  .news-banners li>p {
+    bottom: 5%;
+  }
+
+  .news-banners li:nth-of-type(4)~li {
+    display: none;
+  }
+
+  .news-banners li:not(:last-child)::after {
+    display: none;
+  }
+
+  .news-youtube {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .youtube_banner {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .youtube_banner>p {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 414px) {
+  .sec-newsRoom h3 {
+    font-size: 1.75rem;
+  }
+
+  .sec-newsRoom h3+span {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+  .news-banners li {
+    font-size: smaller;
+    width: calc(50% - 1rem);
+    padding-top: 55%;
+  }
+
+  .news-banners li > div {
+    font-size: smaller;
+  }
+
+  .news-banners li > p {
+    bottom: 1%;
+    font-size: smaller;
+  }
+  .youtube_banner {
+    width: 100%;
+    margin-bottom: 1.75rem;
+  }
+  
+  .youtube_banner>span{
+    font-size: x-small;
+  }
+  .news-banners li:not(:last-child)::after {
+    display: none;
+  }
+}
